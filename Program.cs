@@ -7,6 +7,7 @@ namespace firstStudy
         static void Main(string[] args)
         {
             int[][] numArray = { new int[]{1}, new int[]{3,4}, new int[]{5,6,7} };
+            Console.WriteLine("Hello World");
         }
     }
 }
