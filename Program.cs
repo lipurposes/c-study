@@ -2,22 +2,7 @@
 
 namespace firstStudy
 {
-    class Persion
-    {
-        private int m_age;
-        public int age
-        {
-            get
-            {
-                return m_age;
-            }
-            set
-            {
-                m_age = value;
-            }
-        }
-        public string Name { get; set; }
-    }
+    
     class Program
     {
         static void Main(string[] args)
@@ -38,6 +23,8 @@ namespace firstStudy
             int number = 1;
             Method(ref number);
 
+            Man man = new Man();
+            man.test();
         }
 
         static int Sum(params int[] nums)
