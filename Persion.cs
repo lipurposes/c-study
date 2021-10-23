@@ -23,7 +23,7 @@ namespace firstStudy{
     }
 
     class Man : Persion{
-        public void test(){
+        public new void test(){
             base.test();
             Console.WriteLine("you call base test");
         }
