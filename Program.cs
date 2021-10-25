@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace firstStudy
 {
     
     class Program
     {
+        static Func<int, int> test1;
+        static Action<int> test2;
         static void Main(string[] args)
         {
             int[,] numArray1 = { { 2, 3 }, { 4, 5 } };
@@ -23,8 +27,32 @@ namespace firstStudy
             int number = 1;
             Method(ref number);
 
-            Man man = new Man();
-            man.test();
+            // Man man = new Man();
+            // man.test();
+
+            ArrayList myArrayList = new ArrayList();
+            myArrayList.Add(444);
+            myArrayList.Add("test1");
+            myArrayList.Add(new Persion());
+            Persion persion = myArrayList[2] as Persion;
+            persion.test();
+
+            List<int> list1 = new List<int>();
+
+            Stack myStack = new Stack();
+            Stack<int> testStack = new Stack<int>();
+
+            TestDelegate delegateA = new TestDelegate();
+            Console.WriteLine(delegateA.checkFunc(10));
+
+            // Testdel1 test1 = delegate(int num){
+            //     return num;
+            // };
+            test1 = num => num;
+            Console.WriteLine(test1(12));
+
+            test2 = num => Console.WriteLine(num);
+            test2(99);
         }
 
         static int Sum(params int[] nums)
